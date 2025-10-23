@@ -1,0 +1,197 @@
+
+################################################################################
+Brain3D Network Comprehensive Benchmarking Suite
+################################################################################
+Start time: 2025-10-23 15:57:19
+
+Device: cpu
+Note: CUDA not available, running on CPU
+Initial VRAM: N/A
+
+################################################################################
+Testing Small Network: (10, 10, 10)
+################################################################################
+
+>>> Small - WITHOUT Plasticity
+
+================================================================================
+Benchmarking Initialization: shape=(10, 10, 10), plasticity=False, device=cpu
+================================================================================
+  Total neurons: 1,000
+  Total edges: 20,952
+  Initialization time: 0.008s
+  Memory used: 0.00 MB
+  Throughput: 126186 neurons/sec
+
+Benchmarking Simulation: steps=100, with_input=True
+  Simulation time: 0.039s
+  Time per step: 0.0004s
+  Steps per second: 2587.32
+  Average spikes per step: 928.5
+  Spike rate: 0.9285
+  Neuron updates/sec: 2587320
+
+>>> Small - WITH Plasticity
+
+================================================================================
+Benchmarking Initialization: shape=(10, 10, 10), plasticity=True, device=cpu
+================================================================================
+  Total neurons: 1,000
+  Total edges: 20,952
+  Initialization time: 0.002s
+  Memory used: 0.00 MB
+  Throughput: 407967 neurons/sec
+
+Benchmarking Simulation: steps=100, with_input=True
+  Simulation time: 0.054s
+  Time per step: 0.0005s
+  Steps per second: 1851.63
+  Average spikes per step: 928.5
+  Spike rate: 0.9285
+  Neuron updates/sec: 1851635
+
+################################################################################
+Testing Medium Network: (30, 30, 30)
+################################################################################
+
+>>> Medium - WITHOUT Plasticity
+
+================================================================================
+Benchmarking Initialization: shape=(30, 30, 30), plasticity=False, device=cpu
+================================================================================
+  Total neurons: 27,000
+  Total edges: 654,472
+  Initialization time: 0.068s
+  Memory used: 0.00 MB
+  Throughput: 395637 neurons/sec
+
+Benchmarking Simulation: steps=50, with_input=True
+  Simulation time: 0.253s
+  Time per step: 0.0051s
+  Steps per second: 197.89
+  Average spikes per step: 15933.0
+  Spike rate: 0.5901
+  Neuron updates/sec: 5342997
+
+>>> Medium - WITH Plasticity
+
+================================================================================
+Benchmarking Initialization: shape=(30, 30, 30), plasticity=True, device=cpu
+================================================================================
+  Total neurons: 27,000
+  Total edges: 654,472
+  Initialization time: 0.063s
+  Memory used: 0.00 MB
+  Throughput: 431196 neurons/sec
+
+Benchmarking Simulation: steps=50, with_input=True
+  Simulation time: 0.239s
+  Time per step: 0.0048s
+  Steps per second: 209.56
+  Average spikes per step: 15933.0
+  Spike rate: 0.5901
+  Neuron updates/sec: 5658050
+
+################################################################################
+Testing Large Network: (50, 50, 50)
+################################################################################
+
+>>> Large - WITHOUT Plasticity
+
+================================================================================
+Benchmarking Initialization: shape=(50, 50, 50), plasticity=False, device=cpu
+================================================================================
+  Total neurons: 125,000
+  Total edges: 3,116,792
+  Initialization time: 0.271s
+  Memory used: 0.00 MB
+  Throughput: 460475 neurons/sec
+
+Benchmarking Simulation: steps=30, with_input=True
+  Simulation time: 0.795s
+  Time per step: 0.0265s
+  Steps per second: 37.76
+  Average spikes per step: 14258.3
+  Spike rate: 0.1141
+  Neuron updates/sec: 4719880
+
+################################################################################
+DETAILED COMPARATIVE ANALYSIS
+################################################################################
+
+################################################################################
+COMPARATIVE BENCHMARK: With vs Without Learning
+Network shape: (20, 20, 20), Steps: 50
+################################################################################
+
+>>> Running WITHOUT plasticity (learning disabled)
+
+================================================================================
+Benchmarking Initialization: shape=(20, 20, 20), plasticity=False, device=cpu
+================================================================================
+  Total neurons: 8,000
+  Total edges: 187,112
+  Initialization time: 0.020s
+  Memory used: 0.00 MB
+  Throughput: 391187 neurons/sec
+
+Benchmarking Simulation: steps=50, with_input=True
+  Simulation time: 0.083s
+  Time per step: 0.0017s
+  Steps per second: 600.89
+  Average spikes per step: 5788.0
+  Spike rate: 0.7235
+  Neuron updates/sec: 4807129
+
+>>> Running WITH plasticity (learning enabled)
+
+================================================================================
+Benchmarking Initialization: shape=(20, 20, 20), plasticity=True, device=cpu
+================================================================================
+  Total neurons: 8,000
+  Total edges: 187,112
+  Initialization time: 0.016s
+  Memory used: 0.00 MB
+  Throughput: 492217 neurons/sec
+
+Benchmarking Simulation: steps=50, with_input=True
+  Simulation time: 0.110s
+  Time per step: 0.0022s
+  Steps per second: 453.78
+  Average spikes per step: 5788.0
+  Spike rate: 0.7235
+  Neuron updates/sec: 3630253
+
+================================================================================
+COMPARATIVE RESULTS
+================================================================================
+Without plasticity: 0.083s
+With plasticity: 0.110s
+Overhead: 32.4%
+Slowdown factor: 1.32x
+
+====================================================================================================
+BENCHMARK SUMMARY TABLE
+====================================================================================================
+Shape           Neurons      Plasticity   Init(s)    Sim(s)     Step/s     Spike Rate  
+----------------------------------------------------------------------------------------------------
+10x10x10        1,000        No           0.008      0.039      2587.32    0.9285      
+10x10x10        1,000        Yes          0.002      0.054      1851.63    0.9285      
+30x30x30        27,000       No           0.068      0.253      197.89     0.5901      
+30x30x30        27,000       No           0.063      0.239      209.56     0.5901      
+50x50x50        125,000      No           0.271      0.795      37.76      0.1141      
+20x20x20        8,000        No           0.020      0.083      600.89     0.7235      
+20x20x20        8,000        Yes          0.016      0.110      453.78     0.7235      
+====================================================================================================
+
+
+✓ Results saved to benchmark_results_cpu_20251023_155721.json
+
+################################################################################
+Benchmarking Complete!
+End time: 2025-10-23 15:57:21
+Results saved to: benchmark_results_cpu_20251023_155721.json
+################################################################################
+
+Final VRAM: N/A
+[W1023 15:57:21.959131065 AllocatorConfig.cpp:28] Warning: PYTORCH_CUDA_ALLOC_CONF is deprecated, use PYTORCH_ALLOC_CONF instead (function operator())
