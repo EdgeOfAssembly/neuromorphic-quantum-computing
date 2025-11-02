@@ -1,0 +1,201 @@
+test_reproducibility (test_brain3d.TestBrain3DIntegration.test_reproducibility)
+Test that results are reproducible with fixed seed. ... ok
+test_small_network_learning (test_brain3d.TestBrain3DIntegration.test_small_network_learning)
+Test that a small network can learn a simple pattern. ... ok
+test_connectivity_structure (test_brain3d.TestBrain3DNetwork.test_connectivity_structure)
+Test that connectivity follows the expected 3D structure. ... ok
+test_different_connectivity_radii (test_brain3d.TestBrain3DNetwork.test_different_connectivity_radii)
+Test initialization with different connectivity radii. ... ok
+test_forward_simulation (test_brain3d.TestBrain3DNetwork.test_forward_simulation)
+Test end-to-end forward simulation. ... ok
+test_initialization (test_brain3d.TestBrain3DNetwork.test_initialization)
+Test network initialization. ... ok
+test_log_domain_vs_normal (test_brain3d.TestBrain3DNetwork.test_log_domain_vs_normal)
+Test both log domain and normal computation modes. ... ok
+test_plasticity_disabled (test_brain3d.TestBrain3DNetwork.test_plasticity_disabled)
+Test that plasticity doesn't change weights when disabled. ... ok
+test_plasticity_enabled (test_brain3d.TestBrain3DNetwork.test_plasticity_enabled)
+Test that plasticity changes weights when enabled. ... ok
+test_simulation_with_plasticity (test_brain3d.TestBrain3DNetwork.test_simulation_with_plasticity)
+Test simulation with plasticity enabled. ... ok
+test_synaptic_input_computation (test_brain3d.TestBrain3DNetwork.test_synaptic_input_computation)
+Test synaptic input calculation. ... ok
+test_synaptic_input_zero_spikes (test_brain3d.TestBrain3DNetwork.test_synaptic_input_zero_spikes)
+Test synaptic input with no spikes. ... ok
+test_weight_decode (test_brain3d.TestBrain3DNetwork.test_weight_decode)
+Test weight decoding from exponents. ... ok
+test_initialization (test_brain3d.TestLIFNeuron.test_initialization)
+Test neuron initialization. ... ok
+test_leaky_integration (test_brain3d.TestLIFNeuron.test_leaky_integration)
+Test that voltage decays without input. ... ok
+test_spiking_behavior (test_brain3d.TestLIFNeuron.test_spiking_behavior)
+Test that neurons spike when voltage exceeds threshold. ... ok
+test_voltage_integration (test_brain3d.TestLIFNeuron.test_voltage_integration)
+Test that voltage integrates input current properly. ... ok
+test_voltage_reset (test_brain3d.TestLIFNeuron.test_voltage_reset)
+Test that voltage resets after a spike. ... ok
+test_done_condition_theta_threshold (test_cartpole_a2c.TestCartPoleEnv.test_done_condition_theta_threshold)
+Test that episode ends when pole exceeds angle threshold. ... ok
+test_done_condition_x_threshold (test_cartpole_a2c.TestCartPoleEnv.test_done_condition_x_threshold)
+Test that episode ends when cart exceeds position threshold. ... ok
+test_physics_consistency (test_cartpole_a2c.TestCartPoleEnv.test_physics_consistency)
+Test that physics evolve consistently. ... ok
+test_reset (test_cartpole_a2c.TestCartPoleEnv.test_reset)
+Test environment reset. ... ok
+test_reward_structure (test_cartpole_a2c.TestCartPoleEnv.test_reward_structure)
+Test that reward is 1.0 for each step. ... ok
+test_state_update (test_cartpole_a2c.TestCartPoleEnv.test_state_update)
+Test that state updates correctly. ... ok
+test_step_action_0 (test_cartpole_a2c.TestCartPoleEnv.test_step_action_0)
+Test step with action 0 (left). ... ok
+test_step_action_1 (test_cartpole_a2c.TestCartPoleEnv.test_step_action_1)
+Test step with action 1 (right). ... ok
+test_deterministic_episode (test_cartpole_a2c.TestCartPoleIntegration.test_deterministic_episode)
+Test that episodes are deterministic with fixed seed. ... ok
+test_single_episode (test_cartpole_a2c.TestCartPoleIntegration.test_single_episode)
+Test a single episode of interaction. ... ok
+test_training_step (test_cartpole_a2c.TestCartPoleIntegration.test_training_step)
+Test a single training step. ... ok
+test_ece_basic (test_cartpole_a2c.TestECE.test_ece_basic)
+Test basic ECE computation. ... ok
+test_ece_bounds (test_cartpole_a2c.TestECE.test_ece_bounds)
+Test that ECE is bounded. ... ok
+test_ece_empty_input (test_cartpole_a2c.TestECE.test_ece_empty_input)
+Test ECE with empty input. ... ok
+test_ece_perfect_calibration (test_cartpole_a2c.TestECE.test_ece_perfect_calibration)
+Test ECE with perfectly calibrated predictions. ... ok
+test_gae_basic (test_cartpole_a2c.TestGAE.test_gae_basic)
+Test basic GAE computation. ... ok
+test_gae_increasing_rewards (test_cartpole_a2c.TestGAE.test_gae_increasing_rewards)
+Test GAE with increasing rewards. ... FAIL
+test_gae_shapes (test_cartpole_a2c.TestGAE.test_gae_shapes)
+Test that GAE handles different input lengths. ... ok
+test_gae_with_discount (test_cartpole_a2c.TestGAE.test_gae_with_discount)
+Test that GAE properly discounts future rewards. ... ok
+test_entropy_computation (test_cartpole_a2c.TestQTUNActorCritic.test_entropy_computation)
+Test entropy computation. ... ok
+test_forward_pass (test_cartpole_a2c.TestQTUNActorCritic.test_forward_pass)
+Test forward pass through the network. ... ok
+test_gradient_flow_actor_critic (test_cartpole_a2c.TestQTUNActorCritic.test_gradient_flow_actor_critic)
+Test that gradients flow to both actor and critic. ... ok
+test_initialization (test_cartpole_a2c.TestQTUNActorCritic.test_initialization)
+Test network initialization. ... ok
+test_probability_bounds (test_cartpole_a2c.TestQTUNActorCritic.test_probability_bounds)
+Test that probabilities are in [0, 1]. ... ok
+test_probability_normalization (test_cartpole_a2c.TestQTUNActorCritic.test_probability_normalization)
+Test that action probabilities sum to 1. ... ok
+test_temperature_effect (test_cartpole_a2c.TestQTUNActorCritic.test_temperature_effect)
+Test that temperature affects probability distribution. ... ok
+test_forward_pass (test_cartpole_a2c.TestQTUNLayer.test_forward_pass)
+Test forward pass through layer. ... ok
+test_gradient_flow (test_cartpole_a2c.TestQTUNLayer.test_gradient_flow)
+Test that gradients can flow through the layer. ... ERROR
+test_initialization (test_cartpole_a2c.TestQTUNLayer.test_initialization)
+Test layer initialization. ... ok
+test_qrelu_activation (test_cartpole_a2c.TestQTUNLayer.test_qrelu_activation)
+Test qReLU activation function. ... ok
+test_qrelu_three_states (test_cartpole_a2c.TestQTUNLayer.test_qrelu_three_states)
+Test that qReLU produces three distinct states. ... ok
+test_end_to_end_simulation (test_hybrid_brain_qtun.TestBrain3DQTUNNetwork.test_end_to_end_simulation)
+Test a full simulation run for a few steps. ... ok
+test_initialization (test_hybrid_brain_qtun.TestBrain3DQTUNNetwork.test_initialization)
+Test network initialization. ... ok
+test_plasticity_rule (test_hybrid_brain_qtun.TestBrain3DQTUNNetwork.test_plasticity_rule)
+Test the STDP rule for both potentiation and depression. ... ok
+test_neuron_states (test_hybrid_brain_qtun.TestQTUNeuron.test_neuron_states)
+Test that the neuron correctly identifies all three states. ... ok
+test_different_initial_states (test_sim_basic_qutrit.TestQutritEvolution.test_different_initial_states)
+Test evolution from different initial states. ... ok
+test_evolution_returns_states (test_sim_basic_qutrit.TestQutritEvolution.test_evolution_returns_states)
+Test that evolution returns correct number of states. ... ok
+test_initial_state_preserved (test_sim_basic_qutrit.TestQutritEvolution.test_initial_state_preserved)
+Test that initial state is preserved at t=0. ... ok
+test_state_normalization (test_sim_basic_qutrit.TestQutritEvolution.test_state_normalization)
+Test that states remain normalized throughout evolution. ... ok
+test_superposition_initial_state (test_sim_basic_qutrit.TestQutritEvolution.test_superposition_initial_state)
+Test evolution from a superposition state. ... ok
+test_time_reversal_symmetry (test_sim_basic_qutrit.TestQutritEvolution.test_time_reversal_symmetry)
+Test basic time evolution properties. ... ok
+test_coupling_strength_effect (test_sim_basic_qutrit.TestQutritHamiltonian.test_coupling_strength_effect)
+Test that coupling strength affects Hamiltonian. ... ok
+test_custom_energy_levels (test_sim_basic_qutrit.TestQutritHamiltonian.test_custom_energy_levels)
+Test Hamiltonian with custom energy levels. ... ok
+test_hamiltonian_creation (test_sim_basic_qutrit.TestQutritHamiltonian.test_hamiltonian_creation)
+Test that Hamiltonian is created correctly. ... ok
+test_hamiltonian_hermitian (test_sim_basic_qutrit.TestQutritHamiltonian.test_hamiltonian_hermitian)
+Test that Hamiltonian is Hermitian. ... ok
+test_hamiltonian_real_eigenvalues (test_sim_basic_qutrit.TestQutritHamiltonian.test_hamiltonian_real_eigenvalues)
+Test that Hamiltonian has real eigenvalues. ... ok
+test_hamiltonian_structure (test_sim_basic_qutrit.TestQutritHamiltonian.test_hamiltonian_structure)
+Test the structure of the Hamiltonian (specific couplings). ... ok
+test_determinism (test_sim_basic_qutrit.TestQutritIntegration.test_determinism)
+Test that simulation is deterministic. ... ok
+test_energy_conservation (test_sim_basic_qutrit.TestQutritIntegration.test_energy_conservation)
+Test that energy expectation value is conserved. ... ERROR
+test_full_simulation_pipeline (test_sim_basic_qutrit.TestQutritIntegration.test_full_simulation_pipeline)
+Test the complete simulation pipeline. ... ok
+test_oscillations_present (test_sim_basic_qutrit.TestQutritIntegration.test_oscillations_present)
+Test that Rabi oscillations are present. ... ok
+test_initial_probability_basis0 (test_sim_basic_qutrit.TestStateProbabilities.test_initial_probability_basis0)
+Test probability at t=0 starting from |0>. ... ok
+test_initial_probability_basis1 (test_sim_basic_qutrit.TestStateProbabilities.test_initial_probability_basis1)
+Test probability at t=0 starting from |1>. ... ok
+test_initial_probability_basis2 (test_sim_basic_qutrit.TestStateProbabilities.test_initial_probability_basis2)
+Test probability at t=0 starting from |2>. ... ok
+test_probability_bounds (test_sim_basic_qutrit.TestStateProbabilities.test_probability_bounds)
+Test that probabilities are between 0 and 1. ... ok
+test_probability_evolution (test_sim_basic_qutrit.TestStateProbabilities.test_probability_evolution)
+Test that probabilities evolve over time. ... ok
+test_probability_normalization (test_sim_basic_qutrit.TestStateProbabilities.test_probability_normalization)
+Test that probabilities sum to 1 at each time. ... ok
+test_probability_shape (test_sim_basic_qutrit.TestStateProbabilities.test_probability_shape)
+Test that probability array has correct shape. ... ok
+test_superposition_probabilities (test_sim_basic_qutrit.TestStateProbabilities.test_superposition_probabilities)
+Test probabilities for superposition state. ... ok
+
+======================================================================
+ERROR: test_gradient_flow (test_cartpole_a2c.TestQTUNLayer.test_gradient_flow)
+Test that gradients can flow through the layer.
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/runner/work/neuromorphic-quantum-computing/neuromorphic-quantum-computing/test_cartpole_a2c.py", line 197, in test_gradient_flow
+    loss.backward()
+  File "/home/runner/.local/lib/python3.12/site-packages/torch/_tensor.py", line 625, in backward
+    torch.autograd.backward(
+  File "/home/runner/.local/lib/python3.12/site-packages/torch/autograd/__init__.py", line 354, in backward
+    _engine_run_backward(
+  File "/home/runner/.local/lib/python3.12/site-packages/torch/autograd/graph.py", line 841, in _engine_run_backward
+    return Variable._execution_engine.run_backward(  # Calls into the C++ engine to run the backward pass
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+RuntimeError: element 0 of tensors does not require grad and does not have a grad_fn
+
+======================================================================
+ERROR: test_energy_conservation (test_sim_basic_qutrit.TestQutritIntegration.test_energy_conservation)
+Test that energy expectation value is conserved.
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/runner/work/neuromorphic-quantum-computing/neuromorphic-quantum-computing/test_sim_basic_qutrit.py", line 397, in test_energy_conservation
+    energy = (state.dag() * H * state).tr().real
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'complex' object has no attribute 'tr'
+
+======================================================================
+FAIL: test_gae_increasing_rewards (test_cartpole_a2c.TestGAE.test_gae_increasing_rewards)
+Test GAE with increasing rewards.
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/runner/work/neuromorphic-quantum-computing/neuromorphic-quantum-computing/test_cartpole_a2c.py", line 330, in test_gae_increasing_rewards
+    self.assertTrue(advantages[2] > advantages[0])
+AssertionError: tensor(False) is not true
+
+----------------------------------------------------------------------
+Ran 77 tests in 1.020s
+
+FAILED (failures=1, errors=2)
+Initializing sparse synaptic connections...
+Created 288 connections in 0.00s.
+Initializing sparse synaptic connections...
+Created 288 connections in 0.00s.
+Initializing sparse synaptic connections...
+Created 288 connections in 0.00s.
+[W1102 02:17:26.689289789 AllocatorConfig.cpp:28] Warning: PYTORCH_CUDA_ALLOC_CONF is deprecated, use PYTORCH_ALLOC_CONF instead (function operator())
