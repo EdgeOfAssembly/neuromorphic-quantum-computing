@@ -84,8 +84,11 @@ Good first issues:
 
 ## License
 
-https://github.com/EdgeOfAssembly/neuromorphic-quantum-computing/blob/main/LICENSE
-MIT License
+This repository is dual-licensed.
+
+For non-commercial use, this project is licensed under the GNU General Public License v3.0. Please see the [LICENSE](LICENSE) file for more details.
+
+For commercial use, please contact the author, EdgeOfAssembly, at [haxbox2000@gmail.com](mailto:haxbox2000@gmail.com) to arrange a licensing agreement.
 
 ## Connect
 
