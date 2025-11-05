@@ -194,6 +194,16 @@ class BenchmarkRunner:
                           log_domain: bool = True) -> Dict[str, Any]:
         """Run a complete benchmark: initialization + simulation"""
         
+        # Validate inputs
+        if len(shape) != 3:
+            raise ValueError(f"Shape must be a 3-tuple, got {shape}")
+        if any(s <= 0 for s in shape):
+            raise ValueError(f"Invalid shape: {shape}. All dimensions must be positive.")
+        if num_steps <= 0:
+            raise ValueError(f"Invalid num_steps: {num_steps}. Must be positive.")
+        if connectivity_radius < 0:
+            raise ValueError(f"Invalid connectivity_radius: {connectivity_radius}. Must be non-negative.")
+        
         # Benchmark initialization
         init_result, net = self.benchmark_initialization(
             shape=shape,

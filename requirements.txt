@@ -1,0 +1,23 @@
+# Neuromorphic Quantum Computing - Dependencies
+# Python 3.9+ required
+
+# Core dependencies
+torch>=2.0.0          # PyTorch for neural network operations and CUDA support
+numpy>=1.20.0         # Numerical computing
+tqdm>=4.60.0          # Progress bars for simulations
+
+# Visualization
+matplotlib>=3.5.0     # Plotting for qutrit evolution
+
+# Quantum simulation
+qutip>=4.7.0          # QuTiP for quantum state evolution (required for sim_basic_qutrit.py)
+
+# Optional: For GPU acceleration
+# Install PyTorch with CUDA support separately:
+# pip install torch torchvision torchaudio --index-url https://download.pytorch.org/whl/cu118
+
+# Development dependencies (optional)
+# pytest>=7.0.0       # For running tests
+# black>=22.0.0       # Code formatting
+# flake8>=4.0.0       # Linting
+# mypy>=0.950         # Type checking
