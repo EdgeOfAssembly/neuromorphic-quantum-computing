@@ -33,6 +33,36 @@ python3 brain3d.py --grid 128 --strong-input --3d-inputs
 | CUDA-Accelerated               | 128³ grid in 73 seconds              |
 | Qutrits + QTUN                 | Quantum-enhanced control (in cartpole_a2c.py) |
 
+## Installation
+
+### Prerequisites
+- Python 3.9 or higher
+- NVIDIA GPU with CUDA support (recommended for large networks)
+- 16 GB+ RAM recommended
+
+### Setup
+
+1. Clone the repository:
+```bash
+git clone https://github.com/EdgeOfAssembly/neuromorphic-quantum-computing.git
+cd neuromorphic-quantum-computing
+```
+
+2. Install dependencies:
+```bash
+pip install -r requirements.txt
+```
+
+3. For GPU support, install PyTorch with CUDA:
+```bash
+pip install torch torchvision torchaudio --index-url https://download.pytorch.org/whl/cu118
+```
+
+### Verify Installation
+```bash
+python3 -c "import torch; print('CUDA available:', torch.cuda.is_available())"
+```
+
 ## Quick Start (Full Experience)
 
 ```bash
@@ -50,6 +80,17 @@ python3 brain3d.py --grid 64 --no-plasticity
 - **brain3d.py** --- 3D neuromorphic CPU with plasticity
 - **cartpole_a2c.py** --- QTUN + A2C on CartPole (quantum control)
 - **sim_basic_qutrit.py** --- Qutrit neuron demo (CPU-only)
+- **benchmark_brain3d.py** --- Comprehensive performance benchmarking suite
+- **demo_benchmark.py** --- Quick benchmark demonstration
+
+## Research Documents
+
+- **brain3d.pdf** --- Detailed architecture and implementation documentation
+- **qtun.pdf** --- Quantum Tunneling Unit Neuron (QTUN) model specification
+- **comp16.pdf** --- Computational architecture and design principles
+
+For implementation details, see [IMPLEMENTATION_SUMMARY.md](IMPLEMENTATION_SUMMARY.md)  
+For code review findings, see [CODE_REVIEW_FINDINGS.md](CODE_REVIEW_FINDINGS.md)
 
 ## Roadmap
 
