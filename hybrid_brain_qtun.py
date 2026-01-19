@@ -52,7 +52,8 @@ class QTUNeuron(nn.Module):
         Performs a single time step update of the neuron's state.
         """
         # Leaky integration
-        decay = torch.exp(-dt / self.tau)
+        dt_tensor = torch.tensor(dt, device=self.device) if not isinstance(dt, torch.Tensor) else dt
+        decay = torch.exp(-dt_tensor / self.tau)
         self.v = self.v * decay + I * (1 - decay)
 
         # 1. Excited State (Spike)
