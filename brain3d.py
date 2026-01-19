@@ -12,15 +12,23 @@ import argparse
 
 def print_vram(label: str) -> None:
     """Print current GPU VRAM usage."""
+    if not torch.cuda.is_available():
+        print(f"{label} VRAM: N/A (CUDA not available)")
+        return
+    
     try:
         result = subprocess.run(
             ['nvidia-smi', '--query-gpu=memory.used', '--format=csv,noheader,nounits'],
-            capture_output=True, text=True, check=True
+            capture_output=True, text=True, check=True, timeout=5
         )
         vram_mb = int(result.stdout.strip())
         print(f"{label} VRAM: {vram_mb} MiB")
-    except Exception:
-        print(f"{label} VRAM: N/A")
+    except FileNotFoundError:
+        print(f"{label} VRAM: N/A (nvidia-smi not found)")
+    except subprocess.TimeoutExpired:
+        print(f"{label} VRAM: N/A (nvidia-smi timeout)")
+    except (subprocess.CalledProcessError, ValueError) as e:
+        print(f"{label} VRAM: N/A (error)")
 
 
 class LIFNeuron(nn.Module):
@@ -239,14 +247,14 @@ if __name__ == '__main__':
     parser.add_argument('--steps', type=int, default=200, help='Simulation steps (even; half per phase). Default: 200')
     parser.add_argument('--no-plasticity', action='store_true', help='Disable plasticity for max speed')
     parser.add_argument('--strong-input', action='store_true', help='Use strong input (4.0) on full half-sheets for learning')
-    parser.add_argument('--3d-inputs', action='store_true', help='Use full 3D vertical sheets (all layers) for volumetric learning')
+    parser.add_argument('--3d-inputs', dest='volumetric_inputs', action='store_true', help='Use full 3D vertical sheets (all layers) for volumetric learning')
     args = parser.parse_args()
 
     grid_size: int = args.grid
     num_steps: int = args.steps
     enable_plasticity: bool = not args.no_plasticity
     use_strong_input: bool = args.strong_input
-    use_3d_inputs: bool = getattr(args, '3d_inputs')  # FIXED: dynamic getattr for digit-starting attr
+    use_3d_inputs: bool = args.volumetric_inputs
 
     device: str = 'cuda' if torch.cuda.is_available() else 'cpu'
     print(f"Using device: {device}")
